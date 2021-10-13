@@ -77,7 +77,7 @@ $collections = getCollections $session $targetSite $targetComputer
 #Add collections to computer object for easy output
 $computer | Add-Member -MemberType NoteProperty -Name " " -Value " " #for linebreak in output
 $computer | Add-Member -MemberType NoteProperty -Name "  " -Value " " #for linebreak in output
-$computer | Add-Member -MemberType NoteProperty -Name "[COLLECTION]" -Value "[DEDPLOYMENT]" #for linebreak in output
+$computer | Add-Member -MemberType NoteProperty -Name "[COLLECTION]" -Value "[DEPLOYMENT]" #for linebreak in output
 foreach($collection in $collections){
     if($collection -like "*%SPLIT%*"){
         $output = $collection -split "%SPLIT%"
